@@ -1,0 +1,73 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+wheels/
+*.egg-info/
+.eggs/
+.Python
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
+.venv.bak/
+
+# Local environment variables
+.env
+.env.*
+.env.local
+
+# Local database / indexes
+chroma_db/
+
+# Logs
+logs/
+*.log
+
+# Test & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Type checking / linters
+.mypy_cache/
+.ruff_cache/
+.pyright/
+
+# Caches
+.cache/
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.iml
+
+# OS-specific
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Tooling
+poetry.lock
+pdm.lock
+
+# Node (if present in mixed repos)
+node_modules/
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+.temp/
+~$*

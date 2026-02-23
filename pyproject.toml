@@ -1,0 +1,14 @@
+[project]
+name = "rawagent-sdk"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=1.5.1",
+    "dotenv>=0.9.9",
+    "mcp>=1.26.0",
+    "openai>=2.21.0",
+    "pydantic>=2.12.5",
+    "pyttsx3>=2.99",
+]
