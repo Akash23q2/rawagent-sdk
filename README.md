@@ -5,8 +5,7 @@
   <img src="https://img.youtube.com/vi/_Ca9Yh0w92U/0.jpg" alt="Watch the demo" width="100%">
 </a>
 
-<p align="center"><b> Click to watch in Action!</b></p>
----
+<p align="center"><a href="https://youtu.be/_Ca9Yh0w92U"><b> Click to watch in Action!</b></a></p>
 
 ### A lightweight, agentic AI framework for Python focused on tool-use, structured LLM responses, human-in-the-loop workflows, semantic memory (ChromaDB), and optional MCP tool integration.
 
