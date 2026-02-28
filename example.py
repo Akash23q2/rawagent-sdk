@@ -3,7 +3,7 @@ import os
 import pyttsx3
 from pydantic import BaseModel
 import json
-from llm_model import OpenAi
+from llm_model.open_ai import OpenAi
 from agent_tools import Tools
 from agent_tools.mcp_method import MCPClient,MCPTool
 from agent_core import BuildAgent
@@ -78,7 +78,9 @@ def text_to_speech(text:str, rate:int=150, volume:float=1.0, voice_index:int=0):
     
 
 def main():
-    agent = BuildAgent(name="Model1", description="This is a test agent", llm_client=client, tools=model1_tools, memory_collection_name="rawagent_memory")#, mcp=mcp)
+    agent = BuildAgent(name="Model1", description="This is a test agent",
+                       llm_client=client, tools=model1_tools, memory_collection_name="rawagent_memory",
+                       system_prompt='You are a helpful ai agent which can use tools, help me with the tasks')
 
     while True:
         query = input('\nenter question: ')
@@ -86,7 +88,5 @@ def main():
             break
         response = agent.run_agent_sync(query)
         
-        print(f'********\n{response}\n**********')
-
 if __name__ == "__main__":
     main()

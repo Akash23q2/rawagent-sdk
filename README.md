@@ -1,46 +1,41 @@
 # rawagent-sdk
 
 <!-- PROJECT HERO IMAGE -->
-![rawagent-sdk](https://drive.google.com/uc?id=1bPff5x20Fvmnk3GqYQVhCg6lPafvmMVJ)
+![rawagent-sdk](src\rawagent.png)
 
 
-A lightweight, agentic AI framework for Python focused on tool-use, structured LLM responses, human-in-the-loop workflows, semantic memory (ChromaDB), and optional MCP tool integration.
+### A lightweight, agentic AI framework for Python focused on tool-use, structured LLM responses, human-in-the-loop workflows, semantic memory (ChromaDB), and optional MCP tool integration.
 
-The idea was simple: most agent frameworks are too heavy or too opinionated. This one gives you just enough structure to build something real, while keeping every piece inspectable and replaceable.
+### The idea was simple: most agent frameworks are too heavy or too opinionated. This one gives you just enough structure to build something real, while keeping every piece inspectable and replaceable.
 
 ---
 
 ## Features
 - BuildAgent orchestrates conversations, tool calling, retries, and error handling
-- Pydantic schema (AgentResponse) to enforce JSON-only LLM outputs
-- Tool registry (Tools) with automatic argument schema from function signatures
-- Human-in-the-loop utility for interactive clarification and decisions
+- Output (AgentResponse) to enforce JSON-only LLM outputs. No
+- Tool registry (Tools) with automatic argument type strict schema generation and validator for correct function signatures.
+- Human-in-the-loop utility for interactive clarification and decisions to avoid hallucinations.
 - Semantic memory via ChromaDB (add, query, delete, list)
 - MCP client wrapper for stdio-based external tool servers
 - Pretty logging for tool/LLM/memory events
-- Multiple LLM backends — OpenAI-compatible APIs, Gemini, HuggingFace, or local models via Ollama
+- Multiple LLM backends , OpenAI-compatible APIs, Gemini, HuggingFace, or local models via Ollama
 
 ---
 
 ## What it does
 
-- **BuildAgent** runs the core loop: send query → get structured JSON response → call tools → feed results back → repeat until done
+- **BuildAgent** runs the core loop: send query → get structured JSON response → call tools → feed results back -> repeat until done
 - **AgentResponse** (Pydantic schema) forces the LLM to output structured JSON so tool calls are reliable and predictable
-- **Tools registry** auto-generates argument schemas from Python function type hints — just write a function, decorate it, done
-- **Semantic memory** via ChromaDB — the agent can store and recall facts across sessions
-- **Human-in-the-loop** — agent can pause and ask you for clarification mid-task
-- **MCP support** — plug in external tool servers via stdio (Model Context Protocol)
+- **Tools registry** auto-generates argument schemas from Python function type hints -> just write a function, decorate it, done
+- **Semantic memory** via ChromaDB -> the agent can store and recall facts across sessions
+- **Human-in-the-loop** -> agent can pause and ask you for clarification mid-task
+- **MCP support** -> plug in external tool servers via stdio (Model Context Protocol)
 
 ---
 
-## Demo
+## In Action
 
-<!-- PROJECT DEMO GIF -->
-<!-- Record a terminal session of example.py and drop the gif here -->
-<!-- Tools like `vhs` (https://github.com/charmbracelet/vhs) or `asciinema` work great for this -->
-![demo](assets/demo.gif)
-<!-- Suggested flow to record: run example.py → ask "what's the weather in Tokyo?" → show tool call + response -->
-
+[![Watch the demo](https://img.youtube.com/vi/_Ca9Yh0w92U/0.jpg)](https://youtu.be/_Ca9Yh0w92U)
 ---
 
 ## Setup
@@ -145,8 +140,11 @@ print(result)
 
 ## Example file
 
-`example.py` is a ready-to-run demo showing how to wire up a real tool. It uses the **Open-Meteo API** (no API key needed) to give the agent live weather data.
+`example.py` is a ready-to-run demo showing how to wire up a real tool. It uses the pyttsx3 so make sure its downloaded before running:
 
+```bash
+pip install pyttsx3
+```
 ```bash
 python example.py
 ```
