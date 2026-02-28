@@ -1,8 +1,8 @@
 # rawagent-sdk
+## In Action
 
-<!-- PROJECT HERO IMAGE -->
-![rawagent-sdk](src/rawagent.png)
-
+<a href="https://youtu.be/_Ca9Yh0w92U"><img src="https://img.youtube.com/vi/_Ca9Yh0w92U/0.jpg" alt="Watch the demo" width="100%"></a>
+---
 
 ### A lightweight, agentic AI framework for Python focused on tool-use, structured LLM responses, human-in-the-loop workflows, semantic memory (ChromaDB), and optional MCP tool integration.
 
@@ -31,12 +31,7 @@
 - **Human-in-the-loop** -> agent can pause and ask you for clarification mid-task
 - **MCP support** -> plug in external tool servers via stdio (Model Context Protocol)
 
----
 
-## In Action
-
-[![Watch the demo](https://img.youtube.com/vi/_Ca9Yh0w92U/0.jpg)](https://youtu.be/_Ca9Yh0w92U)
----
 
 ## Setup
 
