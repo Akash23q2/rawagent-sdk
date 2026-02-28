@@ -1,5 +1,5 @@
-# rawagent-sdk
-## In Action
+# `</rawagent-sdk>`
+---
 
 <a href="https://youtu.be/_Ca9Yh0w92U"><img src="https://img.youtube.com/vi/_Ca9Yh0w92U/0.jpg" alt="Watch the demo" width="100%"></a>
 ---
