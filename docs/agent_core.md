@@ -17,7 +17,7 @@ Coordinates the end-to-end loop with the model and tools:
 BuildAgent(
   name: str,
   description: str,
-  llm_client,                         # must implement async invoke_model(messages)
+  llm_client,                         
   tools: agent_tools.Tools | None = None,
   mcp: agent_tools.MCPTool | None = None,
   enable_human_in_loop: bool = True,

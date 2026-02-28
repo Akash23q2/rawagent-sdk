@@ -3,7 +3,7 @@ import os
 import pyttsx3
 from pydantic import BaseModel
 import json
-from llm_model.OpenAi import OpenAi
+from llm_model import OpenAi
 from agent_tools import Tools
 from agent_tools.mcp_method import MCPClient,MCPTool
 from agent_core import BuildAgent
@@ -14,8 +14,9 @@ import asyncio
 
 API_KEY = os.getenv("API_KEY")
 client = OpenAi(api_key=API_KEY)
-#tool to open search query in web browser
 
+
+#tool to open search query in web browser
 model1_tools = Tools()
 @model1_tools.add_tool
 def web_search(url: str) -> str:
@@ -77,20 +78,15 @@ def text_to_speech(text:str, rate:int=150, volume:float=1.0, voice_index:int=0):
     
 
 def main():
-    mcp=MCPTool()
-    # await mcp.add_mcp_client("../flawless-context-mcp/hello_mcp.py")
-    
     agent = BuildAgent(name="Model1", description="This is a test agent", llm_client=client, tools=model1_tools, memory_collection_name="rawagent_memory")#, mcp=mcp)
 
-    past_convo = []
     while True:
         query = input('\nenter question: ')
         if query.lower() in ['exit', 'quit']:
             break
         response = agent.run_agent_sync(query)
-        past_convo.append({"role": "user", "content": query})
-        past_convo.append({"role": "assistant", "content": response})
-
+        
+        print(f'********\n{response}\n**********')
 
 if __name__ == "__main__":
     main()
