@@ -1,5 +1,4 @@
 <h1 align="center"><code>&lt;/rawagent-sdk&gt;</code></h1>
----
 
 <a href="https://youtu.be/_Ca9Yh0w92U">
   <img src="https://img.youtube.com/vi/_Ca9Yh0w92U/0.jpg" alt="Watch the demo" width="100%">
