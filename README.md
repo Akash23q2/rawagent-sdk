@@ -14,7 +14,7 @@
 
 ## Features
 - BuildAgent orchestrates conversations, tool calling, retries, and error handling
-- Output (AgentResponse) to enforce JSON-only LLM outputs. No
+- Output (AgentResponse) to enforce JSON-only LLM outputs. 
 - Tool registry (Tools) with automatic argument type strict schema generation and validator for correct function signatures.
 - Human-in-the-loop utility for interactive clarification and decisions to avoid hallucinations.
 - Semantic memory via ChromaDB (add, query, delete, list)
@@ -53,7 +53,7 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 Then set up the project:
 
 ```bash
-git clone https://github.com/your-username/rawagent-sdk
+git clone https://github.com/Akash23q2/rawagent-sdk
 cd rawagent-sdk
 
 uv venv                          # creates .venv in the project folder
@@ -102,7 +102,7 @@ The project uses `python-dotenv` — calling `load_dotenv()` at the top of your 
 ```python
 from agent_core import BuildAgent
 from agent_tools import Tools
-from llm_model.OpenAi import OpenAi
+from llm_model.open_ai import OpenAi
 
 def search_docs(query: str, top_k: int = 3) -> list[str]:
     """Search internal docs for a query and return top_k snippets."""
@@ -145,7 +145,7 @@ pip install pyttsx3
 python example.py
 ```
 
-The agent can answer questions like *"what's the weather in Tokyo?"* or *"is it raining in London?"* using real-time data. It's a minimal but complete example of the full stack: LLM → tool call → API → response.
+The agent can answer questions like *Open a website, speak something etc.* It's a minimal but complete example of the full stack: LLM → tool call → API → response.
 
 ---
 
