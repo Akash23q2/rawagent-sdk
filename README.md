@@ -1,7 +1,11 @@
 # `</rawagent-sdk>`
 ---
 
-<a href="https://youtu.be/_Ca9Yh0w92U"><img src="https://img.youtube.com/vi/_Ca9Yh0w92U/0.jpg" alt="Watch the demo" width="100%"></a>
+<a href="https://youtu.be/_Ca9Yh0w92U">
+  <img src="https://img.youtube.com/vi/_Ca9Yh0w92U/0.jpg" alt="Watch the demo" width="100%">
+</a>
+
+<p align="center"><b> Click to watch in Action!</b></p>
 ---
 
 ### A lightweight, agentic AI framework for Python focused on tool-use, structured LLM responses, human-in-the-loop workflows, semantic memory (ChromaDB), and optional MCP tool integration.
@@ -30,7 +34,6 @@
 - **Semantic memory** via ChromaDB -> the agent can store and recall facts across sessions
 - **Human-in-the-loop** -> agent can pause and ask you for clarification mid-task
 - **MCP support** -> plug in external tool servers via stdio (Model Context Protocol)
-
 
 
 ## Setup
