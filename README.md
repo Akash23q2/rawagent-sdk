@@ -1,7 +1,7 @@
 # rawagent-sdk
 
 <!-- PROJECT HERO IMAGE -->
-![rawagent-sdk](/rawagent-sdk/src/rawagent.png)
+![rawagent-sdk](src/rawagent.png)
 
 
 ### A lightweight, agentic AI framework for Python focused on tool-use, structured LLM responses, human-in-the-loop workflows, semantic memory (ChromaDB), and optional MCP tool integration.
